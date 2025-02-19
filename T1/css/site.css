@@ -1,0 +1,141 @@
+/*definition of CSS elements*/
+
+body{
+    background-color: orange;
+    font-family:'Times New Roman', Times, serif
+}
+
+h1{
+    text-align: center; /*can algin the image inside to center*/
+}
+
+p{
+    font-size: 20px;
+}
+
+img{
+    max-width: 100%; /*makes sure image doesn't exceed the width of the container*/
+    height: auto; /*makes sure image doesn't exceed the height of the container*/
+}
+
+/*definition of CSS IDs*/
+
+#logo{
+    /* text-align: center; doesnt work on images apparently */
+    max-width: 100%;
+    height: auto;
+}
+
+#slogan{  
+    background-color: brown;
+    color: white;
+    font-size:3em;
+}
+
+/*definition of CSS classes*/
+
+.content{
+    float:left; /*aligns element to left, and allows other elements to wrap around it*/
+}
+
+.side{
+    max-width: 250px; /*Defines max width of element. If content is larger than max-width, height would be changed. If content is smaller than max-width, then it had no effect*/
+    float: right;
+    margin-top: 1em; /*1em means equal to current font size. Margin-top defines space between top edge of element & its surroundings*/
+}
+
+/*class that creates the table on the right. (uses .side class to align right)*/
+.auxinfo{
+    border: 2px solid #be5504;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    overflow:hidden; /*hides content too big to fit in area. Can also do scroll, or visible, which puts content outside the box*/
+}
+
+.auxheader{
+    background-color: #be5504;
+    color: white;
+    padding: 0.5em; /*defines space between element and border of the element*/
+}
+
+.auxcontent{
+    padding: 0.5em;
+    background-color: #ec9706;
+}
+
+.pin{
+    background-image: url(../images/pin_white.png);
+    background-repeat: no-repeat; /*stops image from repeating*/
+    background-size: 0.7em;
+    background-position: 0.5em 50%; /*positions image in the middle of the element*/
+    padding-left: 1.5em !important; /*adds space to the left of the element. !important overrrides all prev. styling rules*/
+}
+
+/*defining layout for different Viewports (screen sizes)*/
+*{
+    box-sizing: border-box; /*makes sure padding and border are included in the element's total width and height*/
+}
+
+.col-1{width: 8.33%;}
+.col-2{width: 16.66%;}
+.col-3{width: 25%;}
+.col-4{width: 33.33%;}
+.col-5{width: 41.66%;}
+.col-6{width: 50%;}
+.col-7{width: 58.33%;}
+.col-8{width: 66.66%;}
+.col-9{width: 75%;}
+.col-10{width: 83.33%;}
+.col-11{width: 91.66%;}
+.col-12{width: 100%;}
+
+[class*="col-"]{ /*selects all classes that start with col-*/
+    float: left;
+}
+
+.row::after{ /*clears floats*/
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/*for mobiles*/
+@media screen and (max-width: 600px){
+
+
+    [class*="col-"]{ /*selects all classes that start with col-*/
+        float: left;
+        width: 100%; /* for mobile phones*/
+    }
+
+    body{
+        background-color:bisque;
+        place-items: center; /*centers all elements in the body for grid layouts*/
+    }
+
+    #slogan{
+        font-size: 1em;
+        color: #f0f0ff;
+        background-color: #7b3f00;
+        width:100%;
+        text-align:center;
+    }
+
+    #logo{
+        width:100%;
+        height:auto;
+    }
+
+    .side{
+        float:none;
+        width: 100%;
+    }
+}
+
+/*for desktops*/
+@media only screen and (min-width: 600px){
+
+    #slogan{
+        font-size: 2em;
+    }
+}

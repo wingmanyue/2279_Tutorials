@@ -3,14 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <title>p13 Exercise</title>
+        <link rel="stylesheet" href="css/site.css">
     </head>
     <body>
-        <h1><image src="images/nike_logo.png" width="200" height="100"></h1>
-            <p>A true beauty experience<sup>TM</sup>!</p>
-            <p>Address: 8 Hung Lok Road, Hung Hom, Kowloon, Hong Kong</p>
-            <a href="T1.html">Reserve now!</a>
+        <h1><image src="images/nike_logo.png" alt="Nike's Logo" width="200" height="100" id="logo"></h1>
+            <p id="slogan">A true beauty experience<sup>TM</sup>!</p>
+            <aside class="side">
+                <div class="auxinfo">
+                    <div class="auxheader"><image src="images/T3_Images_For_Exercise/pin_white.png" class="pin">Address</div>
+                    <div class="auxcontent">8 Hung Lok Road, Hung Hom, Kowloon, Hong Kong</div>
+                </div>
+            </aside>
+            <a href="T1.html" id="reserveLink">Reserve now!</a>
             <p>Registration Steps</p>
-            <ol>
+            <ol id="stepsList">
                 <li><b>Fill in the form</b></li>
                 <li><i>Leave your contacts</i></li>
                 <li><mark>Join our membership</mark></li>
@@ -18,7 +24,7 @@
                 <li><sup>Some Superscript Text</sup></li>
             </ol>
 
-            <table>
+            <table id="customerTable">
                 <tr>
                     <th>First Name</th>
                     <th>Last Name</th>
@@ -31,6 +37,6 @@
                 </tr>
             </table>
 
-            <a href="protection.html">Check our protection measures for COVID here.</a>
+            <a href="protection.html" id="covidLink">Check our protection measures for COVID here.</a>
     </body>
 </html>
