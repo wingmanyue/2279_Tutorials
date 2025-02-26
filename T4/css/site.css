@@ -19,13 +19,19 @@ html {
     font-family: "Lucida Sans", sans-serif;
 }
 
+a{
+    /*makes hyperlinks text the styled color, and removes underline*/
+    text-decoration: none;
+    color: inherit;
+}
+
 .header {
     background-color: #9933cc;
     color: #ffffff;
     padding: 15px;
 }
 
-.menu ul {
+.menu ul { /*belongs to classes "menu" and "ul"*/
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -40,7 +46,7 @@ html {
 }
     
 .menu li:hover{
-    background-color: #0099cc;
+    background-color: #0099cc; /*changes color when mouse hovers over menu item*/
 }
 
 .aside {

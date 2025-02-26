@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+    <script src="javascript/site.js"></script>    
+
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/site.css">
@@ -11,35 +13,46 @@
         </div>
         
         <div class="row">
-            <div class="col-3 menu">
+            <div class="col-3 menu"> <!--Belongs to classes "col-3" & "menu"-->
                 <ul>
-                    <li>The Flight</li>
-                    <li>The City</li>
-                    <li>The Island</li>
-                    <li>The Food</li>
+                    <a href="javascript:menuFlight()"><li id="menuFlight">The Flight</li></a>
+                    <a href="javascript:menuCity()" onclick="document.getElementById('sideWhatTitle').innerHTML=Date()"><li id="menuCity">The City</li></a>
+                    <a href="javascript:menuIsland()"><li id="menuIsland">The Island</li></a>
+                    <a href="javascript:menuFood()"><li id="menuFood">The Food</li></a>
                 </ul>
             </div>
 
             <div class="col-6">
-                <h1>The City</h1>
-                <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+                <h1 id="contentTitle">The City</h1>
+                <p id="contentDetails">Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
             </div>
         
-            <div class="col-3 right">
+            <div class="col-3 right"> <!--Belongs to classes "col-3" & "right"-->
                 <div class="aside">
-                    <h2>What?</h2>
-                    <p>Chania is a city on the island of Crete.</p>
-                    <h2>Where?</h2>
-                    <p>Crete is a Greek island in the Mediterranean Sea.</p>
-                    <h2>How?</h2>
-                    <p>You can reach Chania airport from all over Europe.</p>
+                    <h2 id="sideWhatTitle">What?</h2>
+                    <p id="sideWhatContent">Chania is a city on the island of Crete.</p>
+                    <h2 id="sideWhereTitle">Where?</h2>
+                    <p id="sideWhereContent">Crete is a Greek island in the Mediterranean Sea.</p>
+                    <h2 id="sideWhereTitle">How?</h2>
+                    <p id="sideWhereContent">You can reach Chania airport from all over Europe.</p>
                 </div>
             </div>
         </div>
 
         <div class="footer">
-            <p>Resize the browser window to see how the content respond to the resizing.</p>
+            <a href="javascript:resizeWarning()"><p>Resize the browser window to see how the content respond to the resizing.</p></a>
         </div>
+
+        <script> /*lnline javascript here*/
+            var x = (9*7);
+            document.write(x + 9 + "Hello" + 9 + 9); /*63Hello99 <-- precedence from left to right. Only starts concat instead of add as str after first string in statement.*/
+            if (x < 50) {
+                document.write("<h1>x is less than 50</h1>");
+            }
+            if(x > 50) {
+                document.write("<h2>x is greater than 50</h2>");
+            }
+        </script>
 
     </body>
 </html>
